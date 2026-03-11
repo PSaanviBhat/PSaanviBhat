@@ -6,6 +6,22 @@
 I enjoy building **data-driven AI systems** that solve real-world problems across **healthcare, infrastructure, and autonomous systems**.
 
 ---
+##  Technical Skills
+Programming
+Python • C • JavaScript • Assembly
+
+Machine Learning & AI
+PyTorch • TensorFlow • Scikit-learn • XGBoost
+CNN • LSTM • Autoencoders • SHAP/XAI • RAG
+
+Computer Vision
+YOLOv8 • Zero-DCE • OpenCV
+
+Web & Applications
+MERN Stack • Flask • Streamlit
+
+DevOps & Tools
+Git • GitHub • Linux • MATLAB • LangChain • Vector Databases
 
 ##  Research & Projects
 
@@ -57,20 +73,6 @@ IoT + ML system for **forest fire and landslide risk detection**.
 * Arduino-based environmental sensor platform
 * ML models combining **sensor data and weather forecasts**
 * Anomaly detection for **early risk identification**
-
----
-
-##  Technical Skills
-
-**Programming:** Python, C, JavaScript, Assembly
-
-**Machine Learning & AI:** PyTorch, TensorFlow, Scikit-learn, XGBoost, CNN, LSTM, Autoencoders, SHAP/XAI, RAG
-
-**Computer Vision:** YOLOv8, Zero-DCE, OpenCV
-
-**Web & Applications:** MERN Stack, Flask, Streamlit
-
-**DevOps & Tools:** Git, GitHub, Linux, MATLAB, LangChain, Vector Databases
 
 ---
 
