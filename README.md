@@ -61,7 +61,7 @@ I'm an undergraduate Computer Science student at PES University specializing in 
 ## Key Research & Projects
 
 ### Explainable VAE-EVT-XGBoost Framework for Smart Grid Fault Detection
-**PES University** | Hybrid Deep Learning + Explainability Pipeline
+**Publication-ready** | Hybrid Deep Learning + Explainability Pipeline | **Repository**: [GitHub](https://github.com/PSaanviBhat/-SmartGridAnomalyDetection)
 
 - Engineered anomaly detection achieving **F1 score 0.9959** and **16x improvement** in precision using Variational Autoencoders + DSPOT adaptive thresholding
 - Built latent-augmented XGBoost classifier with **96.85% test accuracy** and F1 of **0.9676**
@@ -73,7 +73,7 @@ I'm an undergraduate Computer Science student at PES University specializing in 
 ---
 
 ### MEMORA: Multimodal Cognitive Assistive Platform for Alzheimer's Patients
-**IEEE SIGHT – PES University** | Production-Grade Multimodal AI System
+Production-Grade Multimodal AI System | **Repository**: [GitHub](https://github.com/PSaanviBhat/Memora-AR-Based-Cognitive-Assistive-Platform)
 
 - Architected end-to-end AI system integrating **biometric identity recognition** (ArcFace face + ECAPA-TDNN voice) with Retrieval-Augmented Generation
 - Developed **vector-database-backed** memory system with sub-second retrieval latency
@@ -104,7 +104,7 @@ A modern, mobile-first civic engagement platform enabling citizens to report, vo
 ---
 
 ### Reinforcement Learning-Based Traffic Signal Optimization
-**PES University** | Adaptive Deep RL Agent
+Adaptive Deep RL Agent | **Repository**: [GitHub](https://github.com/PSaanviBhat/Reinforcement-Learning-Intelligent-Traffic-Light-Controller)
 
 - Trained **PPO-based deep RL agent** in custom Gymnasium environment for real-time traffic optimization
 - Engineered reward functions balancing waiting time, congestion, and emergency vehicle prioritization
