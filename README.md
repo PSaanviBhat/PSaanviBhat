@@ -84,6 +84,25 @@ I'm an undergraduate Computer Science student at PES University specializing in 
 
 ---
 
+### Civic Spark: Gamified Civic Engagement Platform for Bengaluru
+**Live App**: [civic-spark-nine.vercel.app](https://civic-spark-nine.vercel.app) | **Repository**: [GitHub](https://github.com/PSaanviBhat/civic-spark)
+
+A modern, mobile-first civic engagement platform enabling citizens to report, vote on, and track civic infrastructure issues while earning XP, badges, and climbing leaderboards.
+
+**Key Features:**
+- Interactive OpenStreetMap-powered dashboard with real-time issue markers (color-coded by status)
+- Gamification system: 5-tier progression (Citizen → City Champion), achievement badges, daily streaks
+- Community voting with weighted user influence based on reputation levels
+- Issue lifecycle tracking: Report → Verified → Acknowledged → In Progress → Resolved
+- Trust & verification system with photo evidence, GPS timestamping, and spam prevention
+- Smart priority calculation algorithm balancing upvotes, trust scores, and time decay
+
+**Impact**: Designed for citizen-government collaboration in Bengaluru's civic infrastructure management
+
+**Tech Stack**: React 18, TypeScript, Vite, Tailwind CSS, React Leaflet, Radix UI, Framer Motion, TanStack Query
+
+---
+
 ### Reinforcement Learning-Based Traffic Signal Optimization
 **PES University** | Adaptive Deep RL Agent
 
@@ -98,21 +117,12 @@ I'm an undergraduate Computer Science student at PES University specializing in 
 ### Environmental Monitoring & Early Warning System
 **IoT + ML for Forest Fire & Landslide Detection** | March 2025
 
-- Built Arduino-based environmental monitoring platform with temperature, humidity, and smoke sensors
-- Deployed ML-assisted anomaly detection pipelines for early risk identification
-- Validated threshold-based and adaptive alerting on live IoT data
-
 **Tech**: Arduino, IoT Sensor Fusion, Anomaly Detection, Threshold Optimization
 
 ---
 
 ### GrandPrix Insights: F1 Race Prediction System
 **Motorsport Performance ML Pipeline** | October 2025
-
-- Developed end-to-end ML pipeline for race outcome prediction using FastF1 telemetry data
-- Feature engineering for driver form, team strategy, and track dynamics
-- Cross-algorithm benchmarking: Random Forest, Logistic Regression, XGBoost
-- Interactive Streamlit dashboard for race analytics
 
 **Tech**: Random Forest, Logistic Regression, XGBoost, FastF1 Telemetry, Streamlit
 
@@ -146,7 +156,7 @@ I'm an undergraduate Computer Science student at PES University specializing in 
 
 - Deep Reinforcement Learning for complex decision problems
 - Advanced RAG architectures for knowledge-intensive AI systems
-- Quantitative ML for time-series forecasting and anomaly detection in sensor networks
+- Interested in Quantitative Machine Learning, applying statistical modeling and machine learning to financial data.
 
 ---
 
