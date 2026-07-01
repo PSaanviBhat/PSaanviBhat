@@ -81,7 +81,6 @@ I am an undergraduate Computer Science student at PES University specializing in
 ---
 
 #### Multi-Branch Spatio-Temporal Respiration Classifier & Joint MTL Framework
-*Developed during Research Project Internship at Thaniya Technologies*
 * Engineered a 3-branch time-frequency feature extraction pipeline (Mel Spectrogram, CQT, CWT) on the ICBHI 2017 database (6,898 cycles) using a PyTorch-based Cross-Attention Late Fusion and CNN-Conformer sequence classifier.
 * Integrated patient-invariant contrastive regularization (InfoNCE Loss) over patient IDs to align latent features, resolving validation calibration overfitting and achieving a record **47.25% official ICBHI score** under strict patient-wise partitions.
 <details>
@@ -111,7 +110,6 @@ Production-Grade Assistive AI System | [GitHub Repository](https://github.com/PS
 ### Cryptography & Systems Engineering
 
 #### Private Permissioned Blockchain Network for Clinical Trial Data Management
-*Developed during Research Project Internship at Thaniya Technologies*
 * Designed and deployed a 12-step private permissioned blockchain network for clinical trial data management using hybrid PoA + DPoS consensus and SHA-256 cryptographic hashing.
 * Ensured GDPR/HIPAA-compliant immutability across 2,000 trial records with ~23% injected anomalies, achieving near-zero unauthorized data commits via a pre-chain ML fraud gate benchmarking 8 classifiers.
 <details>
@@ -126,7 +124,6 @@ Production-Grade Assistive AI System | [GitHub Repository](https://github.com/PS
 ---
 
 #### Fault-Tolerant Backend ETL Pipeline & Workforce Analytics Dashboard
-*Developed during Software Engineering Internship at UnifyCX*
 * Engineered a production-grade Python ETL pipeline ingesting 1,000+ employee records from external REST APIs through automated format detection and schema normalization, eliminating manual ingestion.
 * Improved pipeline fault tolerance by implementing a retry decorator with three-attempt exponential backoff and SSL-verified session management, reducing transient API failure impact to 0%.
 <details>
@@ -186,21 +183,7 @@ Mobile-First Web Platform | [Live App](https://civic-spark-nine.vercel.app) | [G
 
 ---
 
-#### Environmental Monitoring & Early Warning System
-IoT + ML for Forest Fire & Landslide Detection
-* Built an Arduino-based environmental monitoring system using sensor fusion (temperature, humidity, smoke) for forest fire and landslide risk detection.
-* Validated threshold-based and ML-assisted alerting pipelines on live IoT data.
-* **Tech:** Arduino, IoT Sensor Fusion, Anomaly Detection, Threshold Optimization.
 
----
-
-#### GrandPrix Insights: F1 Race Prediction System
-Motorsport Performance ML Pipeline
-* Developed an end-to-end ML pipeline over FastF1 time-series telemetry data for race outcome prediction.
-* Covered feature engineering, hyperparameter tuning, and cross-algorithm benchmarking across Random Forest, Logistic Regression, and XGBoost.
-* **Tech:** Random Forest, Logistic Regression, XGBoost, FastF1 Telemetry, Streamlit.
-
----
 
 ## GitHub Statistics
 
