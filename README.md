@@ -118,61 +118,13 @@ graph TD
 </div>
 
 
-<style>
-  .project-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 16px;
-    align-items: flex-start;
-    width: 100%;
-    margin-top: 20px;
-  }
-  .project-item {
-    flex: 1 1 calc(50% - 8px);
-    min-width: 320px;
-    box-sizing: border-box;
-  }
-  .project-card {
-    border: 1px solid #30363d;
-    border-radius: 8px;
-    padding: 20px;
-    background-color: #0d1117;
-    transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
-    box-sizing: border-box;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-  }
-  .project-card:hover {
-    border-color: #58a6ff;
-    box-shadow: 0 4px 20px rgba(88, 166, 255, 0.15);
-    transform: translateY(-3px);
-  }
-  .project-tag {
-    font-family: monospace;
-    font-size: 11px;
-    font-weight: bold;
-    color: #58a6ff;
-    background-color: #161b22;
-    padding: 3px 8px;
-    border-radius: 12px;
-    border: 1px solid #30363d;
-    display: inline-block;
-    margin-bottom: 8px;
-  }
-  @media (max-width: 768px) {
-    .project-item {
-      flex: 1 1 100%;
-    }
-  }
-</style>
-
-<div class="project-grid">
-
-  <!-- Project 1 -->
-  <div class="project-item">
-    <div class="project-card">
-      <div class="project-tag">Deep Learning & XAI</div>
+<table width="100%" style="border-collapse: collapse; border: none; table-layout: fixed;">
+  <tr style="border: none; background: transparent;">
+    <!-- Project 1 -->
+    <td valign="top" style="border: 1px solid #30363d; border-radius: 8px; padding: 18px; background-color: #0d1117; width: 48%;">
+      <span style="font-size: 11px; color: #58a6ff; text-transform: uppercase; font-weight: bold; letter-spacing: 0.5px;">Deep Learning & XAI</span>
       <h3 style="margin-top: 5px; margin-bottom: 10px;"><a href="https://github.com/PSaanviBhat/-SmartGridAnomalyDetection" style="color: #c9d1d9; text-decoration: none;">Smart Grid Fault Detector</a></h3>
-      <p style="font-size: 13px; color: #8b949e; margin: 0; line-height: 1.5; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;">
+      <p style="font-size: 13px; color: #8b949e; margin: 0; line-height: 1.5;">
         Engineered a hybrid unsupervised-supervised anomaly detection pipeline achieving a 0.9959 F1-score and 96.85% classification accuracy in smart grid telemetry using VAEs and DSPOT adaptive thresholding.
       </p>
       <br>
@@ -194,15 +146,14 @@ Telemetry Data ➔ VAE Reconstruction ➔ DSPOT Adaptive Threshold ➔ Latent Sp
           <b>Core Stack:</b> VAEs, XGBoost, SHAP/TreeSHAP, Extreme Value Theory, Multivariate Sensor Telemetry.
         </div>
       </details>
-    </div>
-  </div>
-
-  <!-- Project 2 -->
-  <div class="project-item">
-    <div class="project-card">
-      <div class="project-tag">Deep Learning & Audio</div>
+    </td>
+    <!-- Spacer -->
+    <td style="width: 4%; border: none; background: transparent;"></td>
+    <!-- Project 2 -->
+    <td valign="top" style="border: 1px solid #30363d; border-radius: 8px; padding: 18px; background-color: #0d1117; width: 48%;">
+      <span style="font-size: 11px; color: #58a6ff; text-transform: uppercase; font-weight: bold; letter-spacing: 0.5px;">Deep Learning & Audio</span>
       <h3 style="margin-top: 5px; margin-bottom: 10px;"><a href="https://github.com/PSaanviBhat/Lung-Sound-Analysis-and-Respiratory-Disease-Classification-using-Deep-Learning" style="color: #c9d1d9; text-decoration: none;">Respiration Conformer</a></h3>
-      <p style="font-size: 13px; color: #8b949e; margin: 0; line-height: 1.5; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;">
+      <p style="font-size: 13px; color: #8b949e; margin: 0; line-height: 1.5;">
         Developed a PyTorch-based sequential classifier using a Cross-Attention Conformer architecture with multi-task learning and InfoNCE contrastive alignment, achieving a record 47.25% ICBHI score.
       </p>
       <br>
@@ -222,15 +173,15 @@ Telemetry Data ➔ VAE Reconstruction ➔ DSPOT Adaptive Threshold ➔ Latent Sp
           <b>Core Stack:</b> PyTorch, Signal Processing (Mel Spectrogram, CQT, CWT), Conformer, InfoNCE Loss, Multi-Task Learning.
         </div>
       </details>
-    </div>
-  </div>
-
-  <!-- Project 3 -->
-  <div class="project-item">
-    <div class="project-card">
-      <div class="project-tag">Blockchain & Cryptography</div>
+    </td>
+  </tr>
+  <tr style="height: 20px; border: none; background: transparent;"><td colspan="3" style="border: none; background: transparent;"></td></tr>
+  <tr style="border: none; background: transparent;">
+    <!-- Project 3 -->
+    <td valign="top" style="border: 1px solid #30363d; border-radius: 8px; padding: 18px; background-color: #0d1117; width: 48%;">
+      <span style="font-size: 11px; color: #58a6ff; text-transform: uppercase; font-weight: bold; letter-spacing: 0.5px;">Blockchain & Cryptography</span>
       <h3 style="margin-top: 5px; margin-bottom: 10px;"><a href="https://github.com/PSaanviBhat/private-blockchain-clinicaltrial" style="color: #c9d1d9; text-decoration: none;">Clinical Trial Ledger</a></h3>
-      <p style="font-size: 13px; color: #8b949e; margin: 0; line-height: 1.5; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;">
+      <p style="font-size: 13px; color: #8b949e; margin: 0; line-height: 1.5;">
         Designed and deployed a private permissioned blockchain network using hybrid PoA + DPoS consensus and SHA-256 hashing to secure clinical data with a pre-chain ML fraud gate.
       </p>
       <br>
@@ -250,15 +201,14 @@ Clinical Trial Record ➔ XGBoost Fraud Gate ➔ Hybrid PoA+DPoS consensus ➔ S
           <b>Core Stack:</b> Solidity, Blockchain (PoA/DPoS), AES-256-GCM, SHA-256, IPFS, XGBoost.
         </div>
       </details>
-    </div>
-  </div>
-
-  <!-- Project 4 -->
-  <div class="project-item">
-    <div class="project-card">
-      <div class="project-tag">Assistive AI & RAG</div>
+    </td>
+    <!-- Spacer -->
+    <td style="width: 4%; border: none; background: transparent;"></td>
+    <!-- Project 4 -->
+    <td valign="top" style="border: 1px solid #30363d; border-radius: 8px; padding: 18px; background-color: #0d1117; width: 48%;">
+      <span style="font-size: 11px; color: #58a6ff; text-transform: uppercase; font-weight: bold; letter-spacing: 0.5px;">Assistive AI & RAG</span>
       <h3 style="margin-top: 5px; margin-bottom: 10px;"><a href="https://github.com/PSaanviBhat/Memora-AR-Based-Cognitive-Assistive-Platform" style="color: #c9d1d9; text-decoration: none;">Memora Assistive Platform</a></h3>
-      <p style="font-size: 13px; color: #8b949e; margin: 0; line-height: 1.5; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;">
+      <p style="font-size: 13px; color: #8b949e; margin: 0; line-height: 1.5;">
         Architected an end-to-end multimodal AI system integrating biometric face/voice recognition with a ChromaDB Retrieval-Augmented Generation memory pipeline for Alzheimer's patients.
       </p>
       <br>
@@ -278,15 +228,15 @@ Whisper STT ➔ Qwen LLM (RAG over ChromaDB memory) ➔ Coqui TTS synthesis
           <b>Core Stack:</b> ArcFace, ECAPA-TDNN, ChromaDB Vector DB, RAG, Qwen LLM, Whisper STT, Coqui TTS.
         </div>
       </details>
-    </div>
-  </div>
-
-  <!-- Project 5 -->
-  <div class="project-item">
-    <div class="project-card">
-      <div class="project-tag">Quantitative Finance</div>
+    </td>
+  </tr>
+  <tr style="height: 20px; border: none; background: transparent;"><td colspan="3" style="border: none; background: transparent;"></td></tr>
+  <tr style="border: none; background: transparent;">
+    <!-- Project 5 -->
+    <td valign="top" style="border: 1px solid #30363d; border-radius: 8px; padding: 18px; background-color: #0d1117; width: 48%;">
+      <span style="font-size: 11px; color: #58a6ff; text-transform: uppercase; font-weight: bold; letter-spacing: 0.5px;">Quantitative Finance</span>
       <h3 style="margin-top: 5px; margin-bottom: 10px;"><a href="https://github.com/PSaanviBhat/Option-Pricing-Sensitivity-Analysis-Suite" style="color: #c9d1d9; text-decoration: none;">Option Pricing Suite</a></h3>
-      <p style="font-size: 13px; color: #8b949e; margin: 0; line-height: 1.5; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;">
+      <p style="font-size: 13px; color: #8b949e; margin: 0; line-height: 1.5;">
         Implemented a quant suite featuring a Black-Scholes-Merton pricing engine, a Monte Carlo simulator with 95% confidence intervals, and a robust Implied Volatility solver.
       </p>
       <br>
@@ -302,15 +252,14 @@ Whisper STT ➔ Qwen LLM (RAG over ChromaDB memory) ➔ Coqui TTS synthesis
           <b>Core Stack:</b> Python, NumPy, SciPy, Streamlit.
         </div>
       </details>
-    </div>
-  </div>
-
-  <!-- Project 6 -->
-  <div class="project-item">
-    <div class="project-card">
-      <div class="project-tag">Data Engineering</div>
+    </td>
+    <!-- Spacer -->
+    <td style="width: 4%; border: none; background: transparent;"></td>
+    <!-- Project 6 -->
+    <td valign="top" style="border: 1px solid #30363d; border-radius: 8px; padding: 18px; background-color: #0d1117; width: 48%;">
+      <span style="font-size: 11px; color: #58a6ff; text-transform: uppercase; font-weight: bold; letter-spacing: 0.5px;">Data Engineering</span>
       <h3 style="margin-top: 5px; margin-bottom: 10px;"><span style="color: #c9d1d9;">Fault-Tolerant ETL Pipeline</span></h3>
-      <p style="font-size: 13px; color: #8b949e; margin: 0; line-height: 1.5; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;">
+      <p style="font-size: 13px; color: #8b949e; margin: 0; line-height: 1.5;">
         Engineered a production-grade Python ETL pipeline ingesting records from external REST APIs through automated schema normalization, vectorized Pandas transforms, and backoff decorators.
       </p>
       <br>
@@ -326,15 +275,15 @@ Whisper STT ➔ Qwen LLM (RAG over ChromaDB memory) ➔ Coqui TTS synthesis
           <b>Core Stack:</b> Python, Pandas, REST APIs, Pytest, Power BI, Exponential Backoff.
         </div>
       </details>
-    </div>
-  </div>
-
-  <!-- Project 7 -->
-  <div class="project-item">
-    <div class="project-card">
-      <div class="project-tag">Reinforcement Learning</div>
+    </td>
+  </tr>
+  <tr style="height: 20px; border: none; background: transparent;"><td colspan="3" style="border: none; background: transparent;"></td></tr>
+  <tr style="border: none; background: transparent;">
+    <!-- Project 7 -->
+    <td valign="top" style="border: 1px solid #30363d; border-radius: 8px; padding: 18px; background-color: #0d1117; width: 48%;">
+      <span style="font-size: 11px; color: #58a6ff; text-transform: uppercase; font-weight: bold; letter-spacing: 0.5px;">Reinforcement Learning</span>
       <h3 style="margin-top: 5px; margin-bottom: 10px;"><a href="https://github.com/PSaanviBhat/Reinforcement-Learning-Intelligent-Traffic-Light-Controller" style="color: #c9d1d9; text-decoration: none;">Traffic Signal Optimizer</a></h3>
-      <p style="font-size: 13px; color: #8b949e; margin: 0; line-height: 1.5; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;">
+      <p style="font-size: 13px; color: #8b949e; margin: 0; line-height: 1.5;">
         Trained a Proximal Policy Optimization (PPO)-based deep reinforcement learning agent in a custom Gymnasium environment to minimize vehicle waiting times dynamically.
       </p>
       <br>
@@ -350,15 +299,14 @@ Whisper STT ➔ Qwen LLM (RAG over ChromaDB memory) ➔ Coqui TTS synthesis
           <b>Core Stack:</b> Gymnasium, PPO (Stable Baselines3), Custom traffic simulation.
         </div>
       </details>
-    </div>
-  </div>
-
-  <!-- Project 8 -->
-  <div class="project-item">
-    <div class="project-card">
-      <div class="project-tag">Web Application</div>
+    </td>
+    <!-- Spacer -->
+    <td style="width: 4%; border: none; background: transparent;"></td>
+    <!-- Project 8 -->
+    <td valign="top" style="border: 1px solid #30363d; border-radius: 8px; padding: 18px; background-color: #0d1117; width: 48%;">
+      <span style="font-size: 11px; color: #58a6ff; text-transform: uppercase; font-weight: bold; letter-spacing: 0.5px;">Web Application</span>
       <h3 style="margin-top: 5px; margin-bottom: 10px;"><a href="https://github.com/PSaanviBhat/civic-spark" style="color: #c9d1d9; text-decoration: none;">Civic-Spark Platform</a></h3>
-      <p style="font-size: 13px; color: #8b949e; margin: 0; line-height: 1.5; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;">
+      <p style="font-size: 13px; color: #8b949e; margin: 0; line-height: 1.5;">
         Architected a mobile-first citizen advocacy portal for Bengaluru using OpenStreetMap tracking and a decay-weighted priority algorithm to rank civic issues.
       </p>
       <br>
@@ -374,10 +322,9 @@ Whisper STT ➔ Qwen LLM (RAG over ChromaDB memory) ➔ Coqui TTS synthesis
           <b>Core Stack:</b> React 18, TypeScript, Vite, Tailwind CSS, React Leaflet, Radix UI, TanStack Query.
         </div>
       </details>
-    </div>
-  </div>
-
-</div>
+    </td>
+  </tr>
+</table>
 
 ---
 
