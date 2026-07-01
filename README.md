@@ -17,48 +17,72 @@ I am an undergraduate Computer Science student at PES University specializing in
 
 ## Technical Stack
 
-<table>
-  <tr>
-    <td valign="top" width="50%">
-      <h3>Languages & Core Fundamentals</h3>
-      <p>
-        <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python" />
-        <img src="https://img.shields.io/badge/C-A8B9CC?style=flat-square&logo=c&logoColor=white" alt="C" />
-        <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript" />
-        <img src="https://img.shields.io/badge/SQL-4479A1?style=flat-square&logo=postgresql&logoColor=white" alt="SQL" />
-        <img src="https://img.shields.io/badge/Assembly-009639?style=flat-square&logo=assemblyscript&logoColor=white" alt="Assembly" />
-        <img src="https://img.shields.io/badge/MATLAB-0076A8?style=flat-square&logo=mathworks&logoColor=white" alt="MATLAB" />
-      </p>
-      <h3>Quantitative Finance & Machine Learning</h3>
-      <ul>
-        <li><b>Frameworks:</b> PyTorch, TensorFlow, XGBoost, Scikit-learn, NumPy, SciPy</li>
-        <li><b>Quantitative Modeling:</b> Monte Carlo Simulation, Black-Scholes-Merton Pricing, Greeks Sensitivity Analysis</li>
-        <li><b>Deep Learning:</b> LSTMs, CNNs, Autoencoders, Reinforcement Learning (PPO)</li>
-        <li><b>Telemetry & Analytics:</b> Extreme Value Theory (SPOT/DSPOT), Anomaly Detection, Time-Series Forecasting, Adaptive Thresholding</li>
-      </ul>
+<div align="center">
+
+<table style="border-collapse: collapse; border: none;">
+  <tr style="border: none; background: transparent;">
+    <!-- Languages Card -->
+    <td align="center" valign="top" style="border: 1px solid #30363d; border-radius: 8px; padding: 20px 15px; background-color: #0d1117; width: 220px;">
+      <span style="border: 1px solid #30363d; border-radius: 20px; padding: 4px 12px; font-size: 13px; font-family: monospace; background-color: #161b22; color: #58a6ff; font-weight: bold; box-shadow: 0 1px 3px rgba(0,0,0,0.12);">Languages</span>
+      <br><br><br>
+      <div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" width="40" height="40" alt="Python" title="Python" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" width="40" height="40" alt="C" title="C" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" width="40" height="40" alt="JavaScript" title="JavaScript" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/matlab/matlab-original.svg" width="40" height="40" alt="MATLAB" title="MATLAB" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wasm/wasm-original.svg" width="40" height="40" alt="Assembly" title="Assembly" />
+      </div>
     </td>
-    <td valign="top" width="50%">
-      <h3>Systems, Cryptography & Blockchain</h3>
-      <ul>
-        <li><b>Distributed Ledgers:</b> Smart Contracts (Solidity), Consensus Mechanisms (PoA/DPoS)</li>
-        <li><b>Security & Privacy:</b> AES-256-GCM Encryption, Cryptographic Hashing (SHA-256), GDPR- & HIPAA-Compliant Architectures</li>
-        <li><b>Data Engineering:</b> ETL Pipelines, REST API Integration, Pandas Vectorization, Chunked I/O, Pytest Mocking, Exponential Backoff</li>
-        <li><b>Business Intelligence:</b> Power BI Integration</li>
-      </ul>
-      <h3>Computer Vision & Web Tools</h3>
-      <p>
-        <img src="https://img.shields.io/badge/YOLOv8-00FFFF?style=flat-square&logo=yolo&logoColor=black" alt="YOLOv8" />
-        <img src="https://img.shields.io/badge/OpenCV-5C3EE8?style=flat-square&logo=opencv&logoColor=white" alt="OpenCV" />
-        <img src="https://img.shields.io/badge/Zero--DCE-8A2BE2?style=flat-square" alt="Zero-DCE" />
-        <img src="https://img.shields.io/badge/Streamlit-FF4B4B?style=flat-square&logo=streamlit&logoColor=white" alt="Streamlit" />
-        <img src="https://img.shields.io/badge/Flask-000000?style=flat-square&logo=flask&logoColor=white" alt="Flask" />
-        <img src="https://img.shields.io/badge/MERN_Stack-61DAFB?style=flat-square&logo=react&logoColor=black" alt="MERN" />
-        <img src="https://img.shields.io/badge/ChromaDB-4B0082?style=flat-square" alt="Vector DB" />
-        <img src="https://img.shields.io/badge/Arduino_IoT-00979D?style=flat-square&logo=arduino&logoColor=white" alt="Arduino" />
-      </p>
+    <td style="width: 15px; border: none; background: transparent;"></td>
+    <!-- ML & Quant Card -->
+    <td align="center" valign="top" style="border: 1px solid #30363d; border-radius: 8px; padding: 20px 15px; background-color: #0d1117; width: 220px;">
+      <span style="border: 1px solid #30363d; border-radius: 20px; padding: 4px 12px; font-size: 13px; font-family: monospace; background-color: #161b22; color: #58a6ff; font-weight: bold; box-shadow: 0 1px 3px rgba(0,0,0,0.12);">ML & Quant</span>
+      <br><br><br>
+      <div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg" width="40" height="40" alt="PyTorch" title="PyTorch" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" width="40" height="40" alt="TensorFlow" title="TensorFlow" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" width="40" height="40" alt="NumPy" title="NumPy" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" width="40" height="40" alt="Pandas" title="Pandas" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scikitlearn/scikitlearn-original.svg" width="40" height="40" alt="Scikit-Learn" title="Scikit-Learn" />
+        <img src="https://raw.githubusercontent.com/scipy/scipy/main/doc/source/_static/logo.svg" width="40" height="40" alt="SciPy" title="SciPy" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/opencv/opencv-original.svg" width="40" height="40" alt="OpenCV" title="OpenCV" />
+      </div>
+    </td>
+    <td style="width: 15px; border: none; background: transparent;"></td>
+    <!-- Systems & Ledger Card -->
+    <td align="center" valign="top" style="border: 1px solid #30363d; border-radius: 8px; padding: 20px 15px; background-color: #0d1117; width: 220px;">
+      <span style="border: 1px solid #30363d; border-radius: 20px; padding: 4px 12px; font-size: 13px; font-family: monospace; background-color: #161b22; color: #58a6ff; font-weight: bold; box-shadow: 0 1px 3px rgba(0,0,0,0.12);">Systems & Ledger</span>
+      <br><br><br>
+      <div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/solidity/solidity-original.svg" width="40" height="40" alt="Solidity" title="Solidity" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" width="40" height="40" alt="PostgreSQL" title="PostgreSQL" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" width="40" height="40" alt="MongoDB" title="MongoDB" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" width="40" height="40" alt="Docker" title="Docker" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/arduino/arduino-original.svg" width="40" height="40" alt="Arduino" title="Arduino" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytest/pytest-original.svg" width="40" height="40" alt="Pytest" title="Pytest" />
+        <img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg" width="40" height="40" alt="Power BI" title="Power BI" />
+      </div>
+    </td>
+    <td style="width: 15px; border: none; background: transparent;"></td>
+    <!-- Web & DevOps Card -->
+    <td align="center" valign="top" style="border: 1px solid #30363d; border-radius: 8px; padding: 20px 15px; background-color: #0d1117; width: 220px;">
+      <span style="border: 1px solid #30363d; border-radius: 20px; padding: 4px 12px; font-size: 13px; font-family: monospace; background-color: #161b22; color: #58a6ff; font-weight: bold; box-shadow: 0 1px 3px rgba(0,0,0,0.12);">Web & DevOps</span>
+      <br><br><br>
+      <div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width="40" height="40" alt="React" title="React" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" width="40" height="40" alt="Node.js" title="Node.js" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg" width="40" height="40" alt="Flask" title="Flask" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" width="40" height="40" alt="HTML5" title="HTML5" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" width="40" height="40" alt="CSS3" title="CSS3" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" width="40" height="40" alt="Tailwind CSS" title="Tailwind CSS" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" width="40" height="40" alt="Git" title="Git" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" width="40" height="40" alt="Linux" title="Linux" />
+      </div>
     </td>
   </tr>
 </table>
+
+</div>
 
 ---
 
@@ -81,6 +105,7 @@ I am an undergraduate Computer Science student at PES University specializing in
 ---
 
 #### Multi-Branch Spatio-Temporal Respiration Classifier & Joint MTL Framework
+[GitHub Repository](https://github.com/PSaanviBhat/Lung-Sound-Analysis-and-Respiratory-Disease-Classification-using-Deep-Learning)
 * Engineered a 3-branch time-frequency feature extraction pipeline (Mel Spectrogram, CQT, CWT) on the ICBHI 2017 database (6,898 cycles) using a PyTorch-based Cross-Attention Late Fusion and CNN-Conformer sequence classifier.
 * Integrated patient-invariant contrastive regularization (InfoNCE Loss) over patient IDs to align latent features, resolving validation calibration overfitting and achieving a record **47.25% official ICBHI score** under strict patient-wise partitions.
 <details>
@@ -110,6 +135,7 @@ Production-Grade Assistive AI System | [GitHub Repository](https://github.com/PS
 ### Cryptography & Systems Engineering
 
 #### Private Permissioned Blockchain Network for Clinical Trial Data Management
+[GitHub Repository](https://github.com/PSaanviBhat/private-blockchain-clinicaltrial)
 * Designed and deployed a 12-step private permissioned blockchain network for clinical trial data management using hybrid PoA + DPoS consensus and SHA-256 cryptographic hashing.
 * Ensured GDPR/HIPAA-compliant immutability across 2,000 trial records with ~23% injected anomalies, achieving near-zero unauthorized data commits via a pre-chain ML fraud gate benchmarking 8 classifiers.
 <details>
@@ -140,7 +166,7 @@ Production-Grade Assistive AI System | [GitHub Repository](https://github.com/PS
 ### Quantitative Finance & Optimization
 
 #### Option Pricing & Sensitivity Analysis Suite
-Quantitative Finance Tool | [New Project]
+Quantitative Finance Tool | [GitHub Repository](https://github.com/PSaanviBhat/Option-Pricing-Sensitivity-Analysis-Suite)
 * Implemented a quantitative finance suite featuring an analytical Black-Scholes-Merton pricing engine and a Geometric Brownian Motion Monte Carlo simulator with discounted expected payoff and 95% confidence intervals.
 * Designed a dual-method Implied Volatility Solver using Newton-Raphson with analytical Vega gradient and Bisection fallback for convergence robustness.
 <details>
