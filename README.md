@@ -95,88 +95,151 @@ I am an undergraduate Computer Science student at PES University specializing in
 
 ```mermaid
 graph TD
-    classDef default fill:#0d1117,stroke:#30363d,stroke-width:1px,color:#c9d1d9,font-size:16px;
-    classDef highlight fill:#161b22,stroke:#58a6ff,stroke-width:2px,color:#58a6ff,font-size:18px;
-
-    Me["<a href='#projects-portfolio'>P Saanvi: Core Projects Portfolio</a>"]:::highlight
-
+    classDef default fill:#0d1117,stroke:#30363d,stroke-width:1px,color:#c9d1d9;
+    classDef highlight fill:#161b22,stroke:#58a6ff,stroke-width:2px,color:#58a6ff;
+    
+    Me[P Saanvi: Core Projects Portfolio]:::highlight
+    
     Me --> DL[AI/ML & Deep Learning]
     Me --> Systems[Systems & Ledger]
     Me --> Quant[Quantitative Finance]
-
-    DL --> P1["<a href='#explainable-vae-evt-xgboost-framework-for-smart-grid-fault-detection'>Smart Grid Anomaly Detection</a>"]
-    DL --> P2["<a href='#multi-branch-spatio-temporal-respiration-classifier-joint-mtl-framework'>Respiration Sound Classifier</a>"]
-    DL --> P3["<a href='#memora-multimodal-cognitive-assistive-platform-for-alzheimers-patients'>Memora Cognitive Platform</a>"]
-    DL --> P4["<a href='#reinforcement-learning-based-traffic-signal-optimization'>RL Traffic Optimizer</a>"]
-
-    Systems --> P5["<a href='#private-permissioned-blockchain-network-for-clinical-trial-data-management'>Clinical Trial Blockchain Network</a>"]
-    Systems --> P6["<a href='#fault-tolerant-backend-etl-pipeline-workforce-analytics-dashboard'>Fault-Tolerant ETL Pipeline</a>"]
-
-    Quant --> P7["<a href='#option-pricing-sensitivity-analysis-suite'>Option Pricing Suite</a>"]
-    Quant --> P8["<a href='#civic-spark-gamified-civic-engagement-platform-for-bengaluru'>Civic-Spark Web Platform</a>"]
+    
+    DL --> P1["Explainable Smart Grid Fault Detection<br/>(VAE + DSPOT + XGBoost)"]
+    DL --> P2["Spatio-Temporal Respiration Classifier<br/>(CNN-Conformer + InfoNCE Loss)"]
+    DL --> P3["Memora Cognitive Assistive Platform<br/>(RAG + Biometric ArcFace/ECAPA)"]
+    DL --> P4["Reinforcement Learning Traffic Optimizer<br/>(PPO + Reward Shaping)"]
+    
+    Systems --> P5["Clinical Trial Data Management<br/>(Private Permissioned PoA/DPoS Blockchain)"]
+    Systems --> P6["Fault-Tolerant ETL Pipeline<br/>(Pandas Vectorization + Power BI)"]
+    
+    Quant --> P7["Option Pricing Suite<br/>(Black-Scholes-Merton + Monte Carlo)"]
 ```
 
 </div>
-
----
 
 ### Deep Learning, RAG & Explainable AI (XAI)
 
 #### Explainable VAE-EVT-XGBoost Framework for Smart Grid Fault Detection
 **Publication-Ready** | Hybrid Deep Learning + Explainability | [GitHub Repository](https://github.com/PSaanviBhat/-SmartGridAnomalyDetection)
 
+<table width="100%">
+  <tr>
+    <td width="70%" valign="top">
+      <b>Core Innovation</b>: A hybrid unsupervised-supervised pipeline designed for extreme precision anomaly identification and classification in high-dimensional smart grid telemetry streams.
+      <br/><br/>
+      <b>Key Contributions</b>:
+      <ul>
+        <li>Engineered a VAE-reconstruction pipeline integrated with Extreme Value Theory (DSPOT) for adaptive thresholding.</li>
+        <li>Built a latent-augmented XGBoost classifier utilizing SHAP attribution to resolve system faults.</li>
+      </ul>
+    </td>
+    <td width="30%" valign="middle" align="center" style="background-color: #161b22; border-radius: 8px;">
+      <span style="font-size: 11px; color: #8b949e; text-transform: uppercase; font-weight: bold; letter-spacing: 1px;">Target Metrics</span>
+      <br/><br/>
+      <span style="font-size: 26px; color: #58a6ff; font-weight: bold;">0.9959</span>
+      <br/><span style="font-size: 11px; color: #8b949e;">Anomaly F1-Score</span>
+      <br/><br/>
+      <span style="font-size: 26px; color: #3ea6ff; font-weight: bold;">96.85%</span>
+      <br/><span style="font-size: 11px; color: #8b949e;">Classification Acc</span>
+    </td>
+  </tr>
+</table>
+
+<details>
+<summary><b>View Technical Implementation Details & Mathematical Architecture</b></summary>
+
 ```mermaid
 graph LR
-  classDef default fill:#0d1117,stroke:#30363d,stroke-width:1px,color:#c9d1d9,font-size:12px;
-  Telemetry[Grid Telemetry] --> VAE[VAE Anomaly Gate]
-  VAE --> DSPOT[DSPOT Adaptive Thresholding]
-  DSPOT -- Flag Anomaly --> Latent[Latent Space Augmentation]
-  Latent --> XGB[XGBoost Classifier]
-  XGB --> SHAP[TreeSHAP Interpretability]
+  Telemetry[Telemetry Data] --> VAE[VAE Reconstruction]
+  VAE --> DSPOT[DSPOT Adaptive Threshold]
+  DSPOT --> Anomaly{Anomaly?}
+  Anomaly -- Yes --> LatentAug[Latent Space Augmentation]
+  LatentAug --> XGBoost[XGBoost Classifier]
+  XGBoost --> SHAP[SHAP / TreeSHAP Explanation]
 ```
 
-*Anomaly Detection F1 Score: **0.9959** | Test Classification Accuracy: **96.85%***
-
-An end-to-end hybrid ML pipeline combining variational autoencoders and extreme value theory (DSPOT) to detect anomalies in smart grid telemetry streams, featuring SHAP-based attribution for fault root-cause analysis.
+* **DSPOT Threshold Optimization**: Calculates the tail dynamic threshold $V_{th}$ using extreme value parameters:
+  $$V_{th} = X_p + \frac{Y_p}{\gamma} \left( \left(\frac{k}{n}\right)^{-\gamma} - 1 \right)$$
+* Applied SHAP-based explainability to isolate fault-driving process parameters across 7 sensor telemetry dimensions.
+* Proposed a novel interpretability metric, the **XAI Coherence Score (XCS)**, to quantify cross-stage attribution agreement between VAE reconstruction signals and XGBoost SHAP values, enabling reproducible evaluation of explainability pipelines.
+* **Tech:** Variational Autoencoders (VAEs), XGBoost, SHAP/TreeSHAP, Extreme Value Theory (SPOT/DSPOT), Multivariate Sensor Telemetry.
+</details>
 
 ---
 
 #### Multi-Branch Spatio-Temporal Respiration Classifier & Joint MTL Framework
 Audio Signal Classification | [GitHub Repository](https://github.com/PSaanviBhat/Lung-Sound-Analysis-and-Respiratory-Disease-Classification-using-Deep-Learning)
 
-```mermaid
-graph LR
-  classDef default fill:#0d1117,stroke:#30363d,stroke-width:1px,color:#c9d1d9,font-size:12px;
-  Audio[Lung Audio] --> Feat[Mel Spec / CQT / CWT Features]
-  Feat --> Fusion[Cross-Attention Late Fusion]
-  Fusion --> Conformer[CNN-Conformer Sequence Classifier]
-  Conformer --> MTL[Multi-Task Learning Gate]
-  MTL --> Cycle[4-Class Cycles]
-  MTL --> Disease[3-Class Diseases]
-```
+<table width="100%">
+  <tr>
+    <td width="70%" valign="top">
+      <b>Core Innovation</b>: A PyTorch-based sequential classifier using a Cross-Attention Conformer architecture with multi-task learning to diagnose respiratory cycles and diseases.
+      <br/><br/>
+      <b>Key Contributions</b>:
+      <ul>
+        <li>Developed a 3-branch time-frequency feature extraction pipeline (Mel Spectrogram, CQT, CWT).</li>
+        <li>Implemented contrastive regularization (InfoNCE loss) over patient IDs to align latent features, eliminating validation overfitting.</li>
+      </ul>
+    </td>
+    <td width="30%" valign="middle" align="center" style="background-color: #161b22; border-radius: 8px;">
+      <span style="font-size: 11px; color: #8b949e; text-transform: uppercase; font-weight: bold; letter-spacing: 1px;">Target Metrics</span>
+      <br/><br/>
+      <span style="font-size: 26px; color: #58a6ff; font-weight: bold;">47.25%</span>
+      <br/><span style="font-size: 11px; color: #8b949e;">Official ICBHI Score</span>
+      <br/><br/>
+      <span style="font-size: 26px; color: #3ea6ff; font-weight: bold;">93.03%</span>
+      <br/><span style="font-size: 11px; color: #8b949e;">Disease Accuracy</span>
+    </td>
+  </tr>
+</table>
 
-*Official ICBHI Score: **47.25%** | Pathological Disease Accuracy: **93.03%***
+<details>
+<summary><b>View Technical Implementation Details & Mathematical Formulation</b></summary>
 
-A deep learning classifier leveraging PyTorch conformers and late fusion to process respiratory audio streams, using homoscedastic uncertainty optimization to balance multi-task cycle and disease classification.
+* **Contrastive Alignment via InfoNCE Loss**:
+  $$\mathcal{L}_{\text{InfoNCE}} = -\log \frac{\exp(\text{sim}(q, k_+)/\tau)}{\sum_i \exp(\text{sim}(q, k_i)/\tau)}$$
+* Developed a joint multi-task learning (MTL) framework classifying 4-class respiratory cycles and 3-class disease pathologies (COPD, URTI, Healthy) over 6,311 cycles.
+* **Homoscedastic Uncertainty Optimization**: Balances cycle and disease classifications dynamically:
+  $$\mathcal{L}_{\text{MTL}}(W) = \frac{1}{2\sigma_1^2}\mathcal{L}_1(W) + \frac{1}{2\sigma_2^2}\mathcal{L}_2(W) + \log(\sigma_1\sigma_2)$$
+* Deployed class-weighted Focal Loss and Mixup augmentation to achieve a **93.03% disease classification accuracy** and push cycle anomaly sensitivity to **45.08%** at a real-time inference latency of **4.36ms/cycle**.
+* **Tech:** PyTorch, Signal Processing (Mel Spectrogram, CQT, CWT), CNN-Conformer, Cross-Attention Late Fusion, InfoNCE Loss, Multi-Task Learning, Homoscedastic Uncertainty.
+</details>
 
 ---
 
 #### Memora: Multimodal Cognitive Assistive Platform for Alzheimer's Patients
 Production-Grade Assistive AI System | [GitHub Repository](https://github.com/PSaanviBhat/Memora-AR-Based-Cognitive-Assistive-Platform)
 
-```mermaid
-graph LR
-  classDef default fill:#0d1117,stroke:#30363d,stroke-width:1px,color:#c9d1d9,font-size:12px;
-  Biometrics[Face & Voice Input] --> ArcFace[ArcFace + ECAPA Authentication]
-  ArcFace -- Verified --> RAG[ChromaDB Vector Retrieval]
-  Query[Patient Inquiry] --> RAG
-  RAG --> LLM[Local Qwen LLM Inference]
-  LLM --> Voice[Coqui Speech Synthesizer]
-```
+<table width="100%">
+  <tr>
+    <td width="70%" valign="top">
+      <b>Core Innovation</b>: An end-to-end local assistive system connecting multimodal biometric authentication with sub-second retrieval from structured personalized vector memories.
+      <br/><br/>
+      <b>Key Contributions</b>:
+      <ul>
+        <li>Combined face (ArcFace) and voice (ECAPA-TDNN) recognition for reliable patient-family authentication gates.</li>
+        <li>Built an STT → LLM → TTS conversational workflow leveraging ChromaDB-backed Retrieval-Augmented Generation.</li>
+      </ul>
+    </td>
+    <td width="30%" valign="middle" align="center" style="background-color: #161b22; border-radius: 8px;">
+      <span style="font-size: 11px; color: #8b949e; text-transform: uppercase; font-weight: bold; letter-spacing: 1px;">Target Metrics</span>
+      <br/><br/>
+      <span style="font-size: 26px; color: #58a6ff; font-weight: bold;">&lt; 1.0s</span>
+      <br/><span style="font-size: 11px; color: #8b949e;">Memory Retrieval</span>
+      <br/><br/>
+      <span style="font-size: 26px; color: #3ea6ff; font-weight: bold;">Dual</span>
+      <br/><span style="font-size: 11px; color: #8b949e;">Biometric Verification</span>
+    </td>
+  </tr>
+</table>
 
-*Memory Retrieval Latency: **Sub-second (<1.0s)** | Gate Security: **2-Factor Biometric Verification***
+<details>
+<summary><b>View Technical Implementation Details</b></summary>
 
-An assistive AI system integrating facial and vocal biometrics with a local retrieval-augmented generation memory database to assist patients with dementia.
+* Achieved sub-second memory retrieval latency using a ChromaDB-backed vector database with embedding-indexed knowledge retrieval, enabling LLM inference over personalized structured memory at scale.
+* Deployed as a robust local system designed for low-latency cognitive aid.
+* **Tech:** ArcFace, ECAPA-TDNN, ChromaDB Vector DB, RAG, Qwen LLM, Whisper STT, Coqui TTS.
+</details>
 
 ---
 
@@ -185,37 +248,84 @@ An assistive AI system integrating facial and vocal biometrics with a local retr
 #### Private Permissioned Blockchain Network for Clinical Trial Data Management
 Distributed Ledger & Verification | [GitHub Repository](https://github.com/PSaanviBhat/private-blockchain-clinicaltrial)
 
+<table width="100%">
+  <tr>
+    <td width="70%" valign="top">
+      <b>Core Innovation</b>: A GDPR/HIPAA compliant clinical trial ledger featuring pre-chain machine learning validation gates to prevent malicious data injection.
+      <br/><br/>
+      <b>Key Contributions</b>:
+      <ul>
+        <li>Deployed a 12-node permissioned network with a hybrid Proof of Authority (PoA) + Delegated Proof of Stake (DPoS) consensus.</li>
+        <li>Created role-based smart contracts supporting encrypted document storage references on IPFS.</li>
+      </ul>
+    </td>
+    <td width="30%" valign="middle" align="center" style="background-color: #161b22; border-radius: 8px;">
+      <span style="font-size: 11px; color: #8b949e; text-transform: uppercase; font-weight: bold; letter-spacing: 1px;">Target Metrics</span>
+      <br/><br/>
+      <span style="font-size: 26px; color: #58a6ff; font-weight: bold;">86.82%</span>
+      <br/><span style="font-size: 11px; color: #8b949e;">Gate Fraud Accuracy</span>
+      <br/><br/>
+      <span style="font-size: 26px; color: #3ea6ff; font-weight: bold;">O(1)</span>
+      <br/><span style="font-size: 11px; color: #8b949e;">Hash-Chain Verification</span>
+    </td>
+  </tr>
+</table>
+
+<details>
+<summary><b>View Technical Implementation Details & Pipeline Flow</b></summary>
+
 ```mermaid
-graph LR
-  classDef default fill:#0d1117,stroke:#30363d,stroke-width:1px,color:#c9d1d9,font-size:12px;
-  TrialData[Trial Records] --> Fraud[XGBoost ML Fraud Gate]
-  Fraud -- Approved --> Consensus[Proof of Authority + DPoS Consensus]
+graph TD
+  Data[Clinical Trial Record] --> MLGate[XGBoost ML Fraud Gate]
+  MLGate -- Flag Anomaly --> Reject[Reject Commit]
+  MLGate -- Normal --> Consensus[Hybrid PoA + DPoS Consensus]
   Consensus --> Solidity[Solidity Smart Contract Validation]
-  Solidity --> IPFS[IPFS Encrypted Storage]
+  Solidity --> IPFS[IPFS Storage via AES-256-GCM]
   IPFS --> Chain[Private Permissioned Ledger Commit]
 ```
 
-*Fraud Gate Accuracy: **86.82%** | Validation Complexity: **O(1) Hash-Chain Verification***
-
-A private blockchain ledger protecting clinical trial records from unauthorized modification, verified using a pre-chain machine learning gate.
+* Architected 6 Solidity smart contract functions enforcing role-based access control (RBAC), phase-sequence validation (Phase I→IV), and tamper-evident audit trails across distributed nodes.
+* Achieved $O(1)$ hash-chain validation per transaction with AES-256-GCM encryption for IPFS-pinned record storage.
+* Deployed XGBoost as the primary fraud gate achieving **86.82% accuracy** and **100% precision** at 16.4ms inference latency.
+* **Tech:** Solidity, Blockchain (PoA/DPoS), AES-256-GCM, SHA-256, IPFS, Role-Based Access Control, XGBoost.
+</details>
 
 ---
 
 #### Fault-Tolerant Backend ETL Pipeline & Workforce Analytics Dashboard
 Production Data Engineering
 
-```mermaid
-graph LR
-  classDef default fill:#0d1117,stroke:#30363d,stroke-width:1px,color:#c9d1d9,font-size:12px;
-  APIs[REST API Endpoints] --> Normalizer[Pandas Vectorized Transformations]
-  Normalizer --> Fallback[Retry Logic with Exponential Backoff]
-  Fallback --> DB[Chunked Database I/O]
-  DB --> Dashboard[Power BI Workforce Dashboards]
-```
+<table width="100%">
+  <tr>
+    <td width="70%" valign="top">
+      <b>Core Innovation</b>: A high-throughput, self-healing pipeline that automates normalization, loading, and dashboard reporting of cross-organization workforce telemetry.
+      <br/><br/>
+      <b>Key Contributions</b>:
+      <ul>
+        <li>Implemented retry mechanisms with exponential backoffs and SSL-verified session controllers.</li>
+        <li>Optimized Pandas processing pipelines using vectorization and memory-efficient chunked I/O.</li>
+      </ul>
+    </td>
+    <td width="30%" valign="middle" align="center" style="background-color: #161b22; border-radius: 8px;">
+      <span style="font-size: 11px; color: #8b949e; text-transform: uppercase; font-weight: bold; letter-spacing: 1px;">Target Metrics</span>
+      <br/><br/>
+      <span style="font-size: 26px; color: #58a6ff; font-weight: bold;">1,000+</span>
+      <br/><span style="font-size: 11px; color: #8b949e;">API Records Ingested</span>
+      <br/><br/>
+      <span style="font-size: 26px; color: #3ea6ff; font-weight: bold;">0%</span>
+      <br/><span style="font-size: 11px; color: #8b949e;">Transient Failures</span>
+    </td>
+  </tr>
+</table>
 
-*Ingestion Capacity: **1,000+ Records** | Transient Failure Impact: **0%***
+<details>
+<summary><b>View Technical Implementation Details</b></summary>
 
-A robust backend pipeline automating data ingestion from multiple REST endpoints with automated format detection and self-healing session decorators.
+* Accelerated data normalization throughput by optimizing Pandas transformation chains using vectorized operations and memory-efficient chunked I/O.
+* Established reliability through 20+ automated Pytest unit tests mocking network latency, file corruption, and schema mismatches.
+* Extended the system with Power BI-integrated dashboards to surface real-time workforce analytics for cross-functional stakeholders.
+* **Tech:** Python, Pandas, REST APIs, Pytest, ETL, Power BI, Exponential Backoff.
+</details>
 
 ---
 
@@ -224,35 +334,75 @@ A robust backend pipeline automating data ingestion from multiple REST endpoints
 #### Option Pricing & Sensitivity Analysis Suite
 Mathematical Modeling | [GitHub Repository](https://github.com/PSaanviBhat/Option-Pricing-Sensitivity-Analysis-Suite)
 
-```mermaid
-graph LR
-  classDef default fill:#0d1117,stroke:#30363d,stroke-width:1px,color:#c9d1d9,font-size:12px;
-  Params[Option Parameters] --> Engines[Black-Scholes & Monte Carlo Engines]
-  Engines --> Greeks[Portfolio Greeks: Delta/Gamma/Theta/Vega/Rho]
-  Engines --> Solver[Newton-Raphson Implied Volatility Solver]
-  Solver --> Output[Sensitivity Curve Payoffs]
-```
+<table width="100%">
+  <tr>
+    <td width="70%" valign="top">
+      <b>Core Innovation</b>: A quantitative toolkit evaluating option contract valuations and Greeks sensitivities using analytical, numerical, and simulation paradigms.
+      <br/><br/>
+      <b>Key Contributions</b>:
+      <ul>
+        <li>Engineered Black-Scholes-Merton models and Monte Carlo engines to compute expected payoffs.</li>
+        <li>Built an Implied Volatility solver utilizing Newton-Raphson gradients with Bisection fallbacks.</li>
+      </ul>
+    </td>
+    <td width="30%" valign="middle" align="center" style="background-color: #161b22; border-radius: 8px;">
+      <span style="font-size: 11px; color: #8b949e; text-transform: uppercase; font-weight: bold; letter-spacing: 1px;">Target Metrics</span>
+      <br/><br/>
+      <span style="font-size: 26px; color: #58a6ff; font-weight: bold;">5-Leg</span>
+      <br/><span style="font-size: 11px; color: #8b949e;">Strategy Payoffs</span>
+      <br/><br/>
+      <span style="font-size: 26px; color: #3ea6ff; font-weight: bold;">95%</span>
+      <br/><span style="font-size: 11px; color: #8b949e;">Confidence Interval</span>
+    </td>
+  </tr>
+</table>
 
-*Confidence Level: **95% CI** | Strategy Configuration: **Multi-Leg Payoff Visualizer***
+<details>
+<summary><b>View Technical Implementation Details & Mathematical Models</b></summary>
 
-A quantitative finance dashboard executing option strategy valuations, Greeks sensitivity matrix modeling, and volatility curve solving.
+* **Black-Scholes Pricing Framework**:
+  $$C = S_t N(d_1) - K e^{-r(T-t)} N(d_2)$$
+  $$\Delta_{\text{Call}} = \frac{\partial C}{\partial S} = N(d_1)$$
+* Extended the suite with a multi-leg Option Strategy Payoff Visualizer computing portfolio Greeks (Delta, Gamma, Theta, Vega, Rho) as weighted linear combinations across legs.
+* Enabled real-time sensitivity analysis of complex option strategies (e.g., spreads, straddles, iron condors).
+* **Tech:** Python, NumPy, SciPy, Streamlit.
+</details>
 
 ---
 
 #### Reinforcement Learning-Based Traffic Signal Optimization
 Adaptive Signal Control | [GitHub Repository](https://github.com/PSaanviBhat/Reinforcement-Learning-Intelligent-Traffic-Light-Controller)
 
-```mermaid
-graph LR
-  classDef default fill:#0d1117,stroke:#30363d,stroke-width:1px,color:#c9d1d9,font-size:12px;
-  Traffic[Variable Traffic Loads] --> Env[Custom Gymnasium Simulation]
-  Env --> Agent[PPO Reinforcement Learning Agent]
-  Agent --> Controller[Adaptive Traffic Signal Phase Control]
-```
+<table width="100%">
+  <tr>
+    <td width="70%" valign="top">
+      <b>Core Innovation</b>: An adaptive Deep RL agent optimizing traffic signal phases dynamically to minimize queuing delay in simulated networks.
+      <br/><br/>
+      <b>Key Contributions</b>:
+      <ul>
+        <li>Trained Proximal Policy Optimization (PPO) models within a customized Gymnasium environment.</li>
+        <li>Designed multi-term reward mechanisms incorporating time decay and emergency prioritization.</li>
+      </ul>
+    </td>
+    <td width="30%" valign="middle" align="center" style="background-color: #161b22; border-radius: 8px;">
+      <span style="font-size: 11px; color: #8b949e; text-transform: uppercase; font-weight: bold; letter-spacing: 1px;">Target Metrics</span>
+      <br/><br/>
+      <span style="font-size: 26px; color: #58a6ff; font-weight: bold;">PPO</span>
+      <br/><span style="font-size: 11px; color: #8b949e;">Model Architecture</span>
+      <br/><br/>
+      <span style="font-size: 26px; color: #3ea6ff; font-weight: bold;">Sumo/Gym</span>
+      <br/><span style="font-size: 11px; color: #8b949e;">Simulation Suite</span>
+    </td>
+  </tr>
+</table>
 
-*Optimized Model: **Proximal Policy Optimization (PPO)** | Framework: **Gymnasium Environment***
+<details>
+<summary><b>View Technical Implementation Details</b></summary>
 
-A model-free reinforcement learning controller trained using policy gradients to dynamically minimize vehicular wait times at intersections.
+* Implemented learning-rate annealing for stable generalization to unseen traffic distributions.
+* Demonstrated adaptability to multi-intersection scenarios.
+* **Tech:** Gymnasium, Proximal Policy Optimization (PPO), Stable Baselines3, Custom Simulation Environment.
+</details>
 
 ---
 
@@ -261,17 +411,36 @@ A model-free reinforcement learning controller trained using policy gradients to
 #### Civic-Spark: Gamified Civic Engagement Platform for Bengaluru
 Web Application | [Live App](https://civic-spark-nine.vercel.app) | [GitHub Repository](https://github.com/PSaanviBhat/civic-spark)
 
-```mermaid
-graph LR
-  classDef default fill:#0d1117,stroke:#30363d,stroke-width:1px,color:#c9d1d9,font-size:12px;
-  Citizen[Citizen Report] --> Geotag[OpenStreetMap Indexing]
-  Geotag --> Prioritization[Priority Algorithm: Votes * Trust * Time Decay]
-  Prioritization --> Gamification[XP & Badge Leaderboard Progression]
-```
+<table width="100%">
+  <tr>
+    <td width="70%" valign="top">
+      <b>Core Innovation</b>: A mobile-first citizen advocacy portal combining geographic map overlays and a reputation-driven gamification system to report and track infrastructure repairs.
+      <br/><br/>
+      <b>Key Contributions</b>:
+      <ul>
+        <li>Built dynamic geo-marking systems using React Leaflet and OpenStreetMap overlays.</li>
+        <li>Designed a decay-based priority optimization algorithm to prevent feed spam.</li>
+      </ul>
+    </td>
+    <td width="30%" valign="middle" align="center" style="background-color: #161b22; border-radius: 8px;">
+      <span style="font-size: 11px; color: #8b949e; text-transform: uppercase; font-weight: bold; letter-spacing: 1px;">Target Metrics</span>
+      <br/><br/>
+      <span style="font-size: 26px; color: #58a6ff; font-weight: bold;">Live</span>
+      <br/><span style="font-size: 11px; color: #8b949e;">Vercel Deployment</span>
+      <br/><br/>
+      <span style="font-size: 26px; color: #3ea6ff; font-weight: bold;">5-Tier</span>
+      <br/><span style="font-size: 11px; color: #8b949e;">Citizen Progression</span>
+    </td>
+  </tr>
+</table>
 
-*Deployment Status: **Live on Vercel** | Gamification Flow: **5-Tier Citizen Progression***
+<details>
+<summary><b>View Technical Implementation Details</b></summary>
 
-A mobile-first citizen engagement portal combining geolocated map indices with a category-weighted decay algorithm to manage urban repairs.
+* Implemented XP/badge gamification with dynamic leaderboard state management and optimized API caching via Vite.
+* Implemented a trust & verification system featuring photo evidence, GPS timestamping, and spam prevention.
+* **Tech:** React 18, TypeScript, Vite, Tailwind CSS, Framer Motion, React Leaflet, Radix UI.
+</details>
 
 ---
 
